@@ -1,3 +1,5 @@
+package Calculator_Project;
+
 public class MathOperations{
     public float addition(float x, float y){
         return(x+y);

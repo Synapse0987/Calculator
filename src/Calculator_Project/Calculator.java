@@ -1,3 +1,4 @@
+package Calculator_Project;
 import java.util.Scanner;
 
 public class Calculator {
@@ -15,22 +16,22 @@ public class Calculator {
 
         switch (sign){
             case '+' :{
-                sum = calculator.addition(x,y);
+                sum = operator.addition(x,y);
                 break;
             }
             case '-' :{
-                sum = calculator.minus(x,y);
+                sum = operator.minus(x,y);
                 break;
             }
             case '*' :{
-                sum = calculator.multiply(x,y);
+                sum = operator.multiply(x,y);
                 break;
             }
             case '/' :{
-                sum = calculator.division(x,y);
+                sum = operator.division(x,y);
                 break;
             }
         }
-        System.out.printf("Result is: " + sum);
+        System.out.println("Result is: " + sum);
     }
 }

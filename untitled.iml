@@ -7,5 +7,19 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/poi-bin-5.2.2" />
+          <root url="file://$MODULE_DIR$/poi-bin-5.2.2" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/poi-bin-5.2.2" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/poi-bin-5.2.2" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="poi-scratchpad-5.2.2" level="project" />
+    <orderEntry type="library" name="poi-javadoc-5.2.2" level="project" />
   </component>
 </module>
