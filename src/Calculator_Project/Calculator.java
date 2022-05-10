@@ -1,31 +1,18 @@
 import java.util.Scanner;
 
 public class Calculator {
-    public float addition(float x, float y){
-        return(x+y);
-    }
-    public float minus(float x, float y){
-        return(x-y);
-    }
-    public float division(float x, float y){
-        return(x/y);
-    }
-    public float multiply(float x, float y){
-        return(x*y);
-    }
-
     public static void main(String[] args){
-        float x, y;
         float sum = 0;
-        char sign;
-        Calculator calculator = new Calculator();
+        MathOperations operator = new MathOperations();
+
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your desired function. +-*/");
-        sign = input.nextLine().charAt(0);
+        char sign = input.nextLine().charAt(0);
         System.out.println("Enter first number: ");
-        x = input.nextInt();
+        float x = input.nextInt();
         System.out.println("Enter second number: ");
-        y = input.nextInt();
+        float y = input.nextInt();
+
         switch (sign){
             case '+' :{
                 sum = calculator.addition(x,y);
