@@ -19,11 +19,15 @@ public class GenerateExcel {
         XSSFWorkbook wb = new XSSFWorkbook();
         XSSFSheet ws = wb.createSheet("Test");
 
-        for(int i=0;i<10;i++){
-            Row row = ws.createRow(i);
-            Cell cell = row.createCell(0);
-            cell.setCellValue(generateNo());
-        }
+
+
+        for(int row = 0;row<10;row++) {
+            Row rowNo = ws.createRow(row);
+            for (int column = 0; column < 3; column++) {
+                Cell cell = rowNo.createCell(column);
+                cell.setCellValue(generateNo());
+            }
+            }
 
         try (FileOutputStream outputStream = new FileOutputStream("Testing.xlsx")){
             wb.write(outputStream);
