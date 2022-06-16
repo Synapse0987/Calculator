@@ -3,16 +3,16 @@ package Calculator_Project;
 import java.util.ArrayList;
 
 public class MathOperations{
-    public float addition(float x, float y){
+    public int addition(int x, int y){
         return(x+y);
     }
-    public float minus(float x, float y){
+    public int minus(int x, int y){
         return(x-y);
     }
-    public float division(float x, float y){
+    public int division(int x, int y){
         return(x/y);
     }
-    public float multiply(float x, float y){
+    public int multiply(int x, int y){
         return(x*y);
     }
     public int CompareValue(ArrayList<Integer> input){
@@ -23,5 +23,22 @@ public class MathOperations{
             }
         }
         return max;
+    }
+
+    public int calculate(char sign, int x, int y) {
+        switch (sign){
+            case '+' :
+                return(addition(x,y));
+            case '-' :
+                return(minus(x,y));
+            case '*' :
+                return(multiply(x,y));
+            case '/' :
+                if (y == 0){
+                    throw new ArithmeticException("Division by zero is impossible!");
+                }
+                return(division(x,y));
+        }
+        return 0;
     }
 }
