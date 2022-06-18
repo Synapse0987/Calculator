@@ -4,7 +4,7 @@ import java.util.Stack;
 public class Calculator_with_brackets {
 
     public static void main(String[] args) {
-        String test = "20*3/(8+2)";
+        String test = "21/7/(21/7)";
         char[] charList = test.toCharArray();
         Stack<Integer> valueStack = new Stack<>();
         Stack<Character> operatorStack = new Stack<>();
@@ -42,10 +42,16 @@ public class Calculator_with_brackets {
             valueStack.push(applyOp(operatorStack.pop(), valueStack.pop(), valueStack.pop()));
         }
         System.out.println(valueStack);
+//        System.out.println(valueStack);
+//        System.out.println(operatorStack);
+
     }
 
     private static int applyOp(char operator, int x, int y){
         MathOperations cal = new MathOperations();
+        if (operator == '/' || operator == '-'){
+            return cal.calculate(operator, y, x);
+        }
         return cal.calculate(operator, x, y);
     }
 
